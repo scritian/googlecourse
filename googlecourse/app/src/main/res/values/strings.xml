@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">googlecourse</string>
+    <string name="app_name">Trip Manager</string>
+    <string name="name">Cristian Sandor</string>
+    <string name="login_title">Account Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="trip_name">Trip name</string>
+    <string name="destination">Destination</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="trip_type">Trip type</string>
+    <string name="city_break">City break</string>
+    <string name="see_side">See side</string>
+    <string name="mountains">Mountains</string>
+    <string name="price">Price(0€)</string>
+    <string name="rating">Rating</string>
+    <string name="save">SAVE</string>
+    <string name="date">DD/MM/YYYY</string>
 </resources>

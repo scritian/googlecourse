@@ -1,18 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/ttTripName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cristian Sandor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/trip_name"
+        android:textSize="21dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/llTripBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivInfoIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/info" />
+
+        <EditText
+            android:id="@+id/etTripName"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_name" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ttDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/destination"
+        android:textSize="21dp" />
+
+    <LinearLayout
+        android:id="@+id/llDestinationBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivDestIcon"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:background="@drawable/dest" />
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/destination" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTripType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_type"
+            android:textSize="21dp" />
+
+        <RadioGroup
+            android:id="@+id/rgTripType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbCityBreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_break" />
+
+            <RadioButton
+                android:id="@+id/rbSeeSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_side" />
+
+            <RadioButton
+                android:id="@+id/rbMountains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mountains" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="21dp" />
+
+        <SeekBar
+            android:id="@+id/sbPrice"
+            android:layout_width="276dp"
+            android:layout_height="40dp"
+            android:max="10000"
+            android:min="0"
+            android:progress="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llStartEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ttStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                android:textSize="21dp" />
+
+            <EditText
+                android:id="@+id/etStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:hint="@string/date"
+                android:inputType="date"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp">
+
+            <TextView
+                android:id="@+id/ttEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                android:textSize="21dp"/>
+
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:hint="@string/date"
+                android:inputType="date" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textSize="21dp"/>
+        <RatingBar
+            android:id="@+id/rbRating"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:max="5"
+            android:min="0"
+            android:stepSize="1"
+            android:progress="1" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bSave"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/save"
+        android:layout_gravity="center_vertical"
+        android:textSize="19dp"/>
+</LinearLayout>
