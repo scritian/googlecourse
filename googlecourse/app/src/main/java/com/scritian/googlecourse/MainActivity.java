@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 etStartDate=findViewById(R.id.etStartDate);
                 etEndDate=findViewById(R.id.etEndDate);
                 String result="";
-                result+="Destination: "+etTripName.getText().toString()+"\nDestination: "+etDestination.getText().toString();
+                result+="Trip name: "+etTripName.getText().toString()+"\nDestination: "+etDestination.getText().toString();
                 result+="\nTrip type: "+rbSelected.getText().toString()+"\nPrice(€): "+sbPrice.getProgress();
                 result+="€\nStart date: "+etStartDate.getText().toString()+"\nEnd date: "+etEndDate.getText().toString();
                 result+="\nRating: "+rbRating.getRating()+" stars";

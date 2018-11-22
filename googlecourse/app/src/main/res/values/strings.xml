@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trip Manager</string>
+    <string name="app_name">Movie</string>
     <string name="name">Cristian Sandor</string>
     <string name="login_title">Account Login</string>
     <string name="username">Username</string>
@@ -17,4 +17,10 @@
     <string name="rating">Rating</string>
     <string name="save">SAVE</string>
     <string name="date">DD/MM/YYYY</string>
+    //Movie
+    <string name="movie_name">Interstellar</string>
+    <string name="movie_genre">Adventure, Drama, Sci-Fi</string>
+    <string name="movie_actors"> Matthew McConaughey</string>
+    <string name="imd_link">IMDB</string>
+    <string name="movie_description">A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.</string>
 </resources>
