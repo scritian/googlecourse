@@ -14,18 +14,21 @@
         android:id="@+id/tv_movieName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_toRightOf="@id/iv_movieIcon"/>
+    <TextView
+        android:id="@+id/tv_movieGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_movieName"
+        android:layout_marginBottom="15dp"
         android:layout_toRightOf="@id/iv_movieIcon"/>
     <RatingBar
         android:id="@+id/rb_movieRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_movieName"
+        android:layout_below="@+id/tv_movieGenre"
         android:layout_toRightOf="@id/iv_movieIcon"
-        style="@style/TextAppearance.AppCompat.Medium"/>
-    <TextView
-        android:id="@+id/tv_movieGenre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rb_movieRating"
-        android:layout_toRightOf="@id/iv_movieIcon"/>
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:clickable="false"/>
 </RelativeLayout>
