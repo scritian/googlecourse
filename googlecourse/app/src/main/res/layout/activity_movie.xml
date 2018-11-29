@@ -58,13 +58,14 @@
         android:text="@string/movie_description"/>
     <TextView
         android:id="@+id/tvLinkIMDB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/imd_link"
+        android:layout_width="150dp"
+        android:layout_height="95dp"
         android:layout_below="@id/tvMovieDescription"
         android:textColor="@color/colorPrimaryDark"
         android:layout_marginTop="15dp"
         android:gravity="center"
+        android:background="@drawable/imdb"
+        android:layout_centerInParent="true"
         android:clickable="true"/>
     <LinearLayout
         android:id="@+id/flMovieSuggestions"
@@ -84,14 +85,15 @@
     <ImageView
         android:id="@+id/ivMovie1"
         android:layout_width="75dp"
-        android:layout_height="75dp" />
+        android:layout_height="75dp"
+        android:background="@drawable/movie1"/>
             <RatingBar
                 android:id="@+id/rbMovie1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:numStars="5"
-                android:rating="4.8"
+                android:rating="4"
                 android:stepSize="0.1"/>
         </LinearLayout>
         <LinearLayout
@@ -104,14 +106,15 @@
             <ImageView
                 android:id="@+id/ivMovie2"
                 android:layout_width="75dp"
-                android:layout_height="75dp" />
+                android:layout_height="75dp"
+                android:background="@drawable/movie2"/>
             <RatingBar
                 android:id="@+id/rbMovie2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:numStars="5"
-                android:rating="4.8"
+                android:rating="4.5"
                 android:stepSize="0.1"/>
         </LinearLayout>
         <LinearLayout
@@ -124,14 +127,15 @@
             <ImageView
                 android:id="@+id/ivMovie3"
                 android:layout_width="75dp"
-                android:layout_height="75dp"/>
+                android:layout_height="75dp"
+                android:background="@drawable/movie3"/>
             <RatingBar
                 android:id="@+id/rbMovie3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:numStars="5"
-                android:rating="4.8"
+                android:rating="4"
                 android:stepSize="0.1"/>
         </LinearLayout>
         <LinearLayout
@@ -144,14 +148,15 @@
             <ImageView
                 android:id="@+id/ivMovie4"
                 android:layout_width="75dp"
-                android:layout_height="75dp" />
+                android:layout_height="75dp"
+                android:background="@drawable/movie4"/>
             <RatingBar
                 android:id="@+id/rbMovie4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:numStars="5"
-                android:rating="4.8"
+                android:rating="4.1"
                 android:stepSize="0.1"/>
         </LinearLayout>
     </LinearLayout>

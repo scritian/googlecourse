@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(password.equals(registeredUser) & username.equals(registeredUser)) {
                     Toast.makeText(LoginActivity.this, "You have succesfully logged in!", Toast.LENGTH_SHORT).show();
                     //setContentView(R.layout.activity_main);
-                    startActivity(new Intent(LoginActivity.this, MovieActivity.class));
+                    startActivity(new Intent(LoginActivity.this, MoviesActivity.class));
                 }
                 else if(!password.equals(registeredUser) & username.equals(registeredUser))
                     Toast.makeText(LoginActivity.this, "Wrong password!", Toast.LENGTH_SHORT).show();

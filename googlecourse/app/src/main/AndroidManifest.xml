@@ -11,21 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="Trip manager" />
         <activity android:name=".LoginActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MovieActivity"
-            android:label="Movie"/>
-        <activity android:name=".WebViewActivity"
-            android:label="IMDB">
-        </activity>
+        <activity
+            android:name=".MovieActivity"
+            android:label="Movie" />
+        <activity
+            android:name=".WebViewActivity"
+            android:label="IMDB"></activity>
+        <activity android:name=".MoviesActivity"></activity>
     </application>
 
 </manifest>
