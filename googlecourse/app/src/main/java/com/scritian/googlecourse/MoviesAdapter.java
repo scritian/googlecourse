@@ -18,24 +18,35 @@ import java.util.ArrayList;
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
 
     private ArrayList<Movie> mDataset;
+    private AdapterIemClickListener onItemClickListener;
+
+    public MoviesAdapter(ArrayList<Movie> mDataset, AdapterIemClickListener onItemClickListener){
+        this.onItemClickListener=onItemClickListener;
+        this.mDataset=mDataset;
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public static class MovieViewHolder extends RecyclerView.ViewHolder {
+    public class MovieViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView tvMovieName;
         public TextView tvMovieGenre;
         public RatingBar rbMovieRating;
         public ImageView ivMovieIcon;
 
-        public MovieViewHolder(View relativeLayout) {
-            super(relativeLayout);
-
-            tvMovieName = relativeLayout.findViewById(R.id.tv_movieName);
-            tvMovieGenre = relativeLayout.findViewById(R.id.tv_movieGenre);
-            rbMovieRating = relativeLayout.findViewById(R.id.rb_movieRating);
-            ivMovieIcon = relativeLayout.findViewById(R.id.iv_movieIcon);
+        public MovieViewHolder(View view){
+            super(view);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onItemClickListener.onItemClick(view, getAdapterPosition());
+                }
+            });
+            tvMovieName = view.findViewById(R.id.tv_movieName);
+            tvMovieGenre = view.findViewById(R.id.tv_movieGenre);
+            rbMovieRating = view.findViewById(R.id.rb_movieRating);
+            ivMovieIcon = view.findViewById(R.id.iv_movieIcon);
         }
     }
 
