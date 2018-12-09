@@ -27,6 +27,7 @@ public class MovieActivity extends AppCompatActivity {
     String movieGenre;
     float movieRating;
     String moviePhotoBase64;
+    String movieIMDB;
 
 
     @Override
@@ -43,6 +44,7 @@ public class MovieActivity extends AppCompatActivity {
             moviePhotoBase64=bundle.getString(Constants.Movie_PhotoBase64);
             movieRating=bundle.getFloat(Constants.Movie_Rating);
             movieDescription=bundle.getString(Constants.Movie_Description);
+            movieIMDB=bundle.getString(Constants.Movie_IMDB);
         } catch(Exception ex) {
             ex.printStackTrace();
             Toast.makeText(MovieActivity.this, "Error!", Toast.LENGTH_LONG).show();
@@ -59,6 +61,7 @@ public class MovieActivity extends AppCompatActivity {
         tvmovieGenre.setText(movieGenre);
         rbMovieRating.setRating(movieRating);
         ivMovieIcon.setImageBitmap(decodeImageFromString(moviePhotoBase64));
+        Constants.Movie_IMDB = movieIMDB;
 
         tvLinkIMDB.setOnClickListener(new View.OnClickListener() {
             @Override

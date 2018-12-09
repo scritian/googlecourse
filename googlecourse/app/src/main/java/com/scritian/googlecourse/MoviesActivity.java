@@ -26,6 +26,11 @@ public class MoviesActivity extends AppCompatActivity {
     private String theDepartedDescription = "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.";
     private String spiritedAwayDescription = "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.";
     private String interstellarDescription = "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.";
+    private String avengersInfiniteIMDB="https://www.imdb.com/title/tt4154756/";
+    private String inceptionIMDB="https://www.imdb.com/title/tt1375666/";
+    private String theDepartedIMDB="https://www.imdb.com/title/tt0407887/";
+    private String spiritedAwayIMDB="https://www.imdb.com/title/tt0245429/";
+    private String interstellarIMDB="https://www.imdb.com/title/tt0816692/";
 
     private ArrayList<Movie> moviesList;
 
@@ -41,11 +46,11 @@ public class MoviesActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        Movie interstellar = new Movie("Interstellar", interstellarDescription, "Sci-Fi", 4.7f, interstellarPhotoBase64, null);
-        Movie theDeparted = new Movie("The Departed", theDepartedDescription, "Crime", 4.3f, theDepartedPhotoBase64,null);
-        Movie spiritedAway = new Movie("Spirited Away", spiritedAwayDescription, "Animated, Fantasy", 5.0f, spiritedAwayPhotoBase64,null);
-        Movie inception = new Movie("Inception", inceptionDescription, "Sci-Fi", 3.5f, inceptionPhotoBase64,null);
-        Movie avengersInfinite = new Movie("Avengers: Infinity War", avengersInfiniteDescription, "Sci-Fi, Fantasy", 4.0f, avengersInfinitePhotoBase64,null);
+        Movie interstellar = new Movie("Interstellar", interstellarDescription, "Sci-Fi", 4.7f, interstellarPhotoBase64, interstellarIMDB, null);
+        Movie theDeparted = new Movie("The Departed", theDepartedDescription, "Crime", 4.3f, theDepartedPhotoBase64, theDepartedIMDB, null);
+        Movie spiritedAway = new Movie("Spirited Away", spiritedAwayDescription, "Animated, Fantasy", 5.0f, spiritedAwayPhotoBase64, spiritedAwayIMDB, null);
+        Movie inception = new Movie("Inception", inceptionDescription, "Sci-Fi", 3.5f, inceptionPhotoBase64, inceptionIMDB, null);
+        Movie avengersInfinite = new Movie("Avengers: Infinity War", avengersInfiniteDescription, "Sci-Fi, Fantasy", 4.0f, avengersInfinitePhotoBase64, avengersInfiniteIMDB, null);
 
         moviesList = new ArrayList<>();
         moviesList.add(inception);
@@ -65,6 +70,7 @@ public class MoviesActivity extends AppCompatActivity {
                 intent.putExtra(Constants.Movie_Rating, clickedMovie.getRating());
                 intent.putExtra(Constants.Movie_Genre, clickedMovie.getGenre());
                 intent.putExtra(Constants.Movie_PhotoBase64, clickedMovie.getPhotoBase64());
+                intent.putExtra(Constants.Movie_IMDB, clickedMovie.getIMDB());
                 startActivity(intent);
             }
         });

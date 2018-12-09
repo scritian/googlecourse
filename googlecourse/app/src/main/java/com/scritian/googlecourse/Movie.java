@@ -8,16 +8,18 @@ public class Movie {
     private String genre;
     private float rating;
     private String photoBase64;
+    private String IMDB;
     private ArrayList<RelatedMovie> relatedMovieArrayList;
 
     public Movie(String name, String shortDescription,
-                 String genre, float rating, String photoBase64,
+                 String genre, float rating, String photoBase64, String IMDB,
                  ArrayList<RelatedMovie> relatedMovieArrayList) {
         this.name = name;
         this.shortDescription = shortDescription;
         this.genre = genre;
         this.rating = rating;
         this.photoBase64 = photoBase64;
+        this.IMDB= IMDB;
         this.relatedMovieArrayList = relatedMovieArrayList;
     }
 
@@ -60,6 +62,10 @@ public class Movie {
     public void setPhotoBase64(String photoBase64) {
         this.photoBase64 = photoBase64;
     }
+
+    public String getIMDB(){ return IMDB; }
+
+    public void setIMDB(String IMDB){ this.IMDB = IMDB; }
 
     public ArrayList<RelatedMovie> getRelatedMovieArrayList() {
         return relatedMovieArrayList;
